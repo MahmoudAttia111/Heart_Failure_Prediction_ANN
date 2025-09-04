@@ -19,7 +19,7 @@ from tensorflow import keras
 from sklearn.model_selection import train_test_split
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
-from sklearn.preprocessing import StandardScaler,LabelEncoder
+from sklearn.preprocessing import MinMaxScaler,LabelEncoder
 from sklearn.metrics import f1_score,roc_curve,accuracy_score,confusion_matrix,classification_report,roc_auc_score
 from tensorflow.keras.callbacks import EarlyStopping
 import joblib
@@ -97,7 +97,7 @@ joblib.dump(le_slope, 'le_st_slope.pkl')
 # df['MaxHR'] = ss.fit_transform(df[['MaxHR']])
 # df['Oldpeak'] = ss.fit_transform(df[['Oldpeak']])
 
-scaler = StandardScaler()
+scaler = MinMaxScaler()
 df[['Age','RestingBP','Cholesterol','MaxHR','Oldpeak']] = scaler.fit_transform(
     df[['Age','RestingBP','Cholesterol','MaxHR','Oldpeak']]
 )
@@ -150,3 +150,5 @@ with open("requirements.txt", "w") as f:
 
 from google.colab import files
 files.download("requirements.txt")
+
+df
