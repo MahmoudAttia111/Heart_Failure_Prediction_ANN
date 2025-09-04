@@ -58,12 +58,37 @@ for column in numerical_columns:
 
 df.info()
 
-LE = LabelEncoder()
-df['Sex'] = LE.fit_transform(df['Sex'])
-df['ChestPainType'] = LE.fit_transform(df['ChestPainType'])
-df['RestingECG'] = LE.fit_transform(df['RestingECG'])
-df['ExerciseAngina'] = LE.fit_transform(df['ExerciseAngina'])
-df['ST_Slope'] = LE.fit_transform(df['ST_Slope'])
+# LE = LabelEncoder()
+# df['Sex'] = LE.fit_transform(df['Sex'])
+# df['ChestPainType'] = LE.fit_transform(df['ChestPainType'])
+# df['RestingECG'] = LE.fit_transform(df['RestingECG'])
+# df['ExerciseAngina'] = LE.fit_transform(df['ExerciseAngina'])
+# df['ST_Slope'] = LE.fit_transform(df['ST_Slope'])
+
+
+le_sex = LabelEncoder()
+df['Sex'] = le_sex.fit_transform(df['Sex'])
+joblib.dump(le_sex, 'le_sex.pkl')
+
+# Chest Pain Type
+le_chest = LabelEncoder()
+df['ChestPainType'] = le_chest.fit_transform(df['ChestPainType'])
+joblib.dump(le_chest, 'le_chest.pkl')
+
+# RestingECG
+le_ecg = LabelEncoder()
+df['RestingECG'] = le_ecg.fit_transform(df['RestingECG'])
+joblib.dump(le_ecg, 'le_resting_ecg.pkl')
+
+# ExerciseAngina
+le_exercise = LabelEncoder()
+df['ExerciseAngina'] = le_exercise.fit_transform(df['ExerciseAngina'])
+joblib.dump(le_exercise, 'le_exercise.pkl')
+
+# ST_Slope
+le_slope = LabelEncoder()
+df['ST_Slope'] = le_slope.fit_transform(df['ST_Slope'])
+joblib.dump(le_slope, 'le_st_slope.pkl')
 
 # ss = StandardScaler()
 # df['Age'] = ss.fit_transform(df[['Age']])
@@ -109,3 +134,19 @@ df.columns
 
 
 
+requirements = """streamlit
+numpy
+pandas
+scikit-learn
+tensorflow
+joblib
+matplotlib
+seaborn
+"""
+
+with open("requirements.txt", "w") as f:
+    f.write(requirements)
+
+
+from google.colab import files
+files.download("requirements.txt")
