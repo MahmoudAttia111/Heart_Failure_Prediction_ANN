@@ -27,7 +27,7 @@ Heart-Failure-Prediction/
 
 ## ⚙️ Installation & Setup
 1. Clone Repository
-git clone https://github.com/your-username/heart-failure-prediction.git
+git clone https://github.com/MahmoudAttia111/Heart_Failure_Prediction_ANN.git
 cd heart-failure-prediction
 
 2. Create Virtual Environment (recommended)
