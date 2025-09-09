@@ -67,9 +67,4 @@ scikit-learn
 numpy
 pandas
 joblib
-
  
-
-Try advanced models (Random Forest, XGBoost).
-
-Connect with a database for storing patient history.
