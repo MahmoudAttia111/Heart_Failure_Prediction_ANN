@@ -17,13 +17,16 @@ Interactive Streamlit Web App for predictions.
 Deployment via Streamlit Cloud (free & easy).
 
 ## 📂 Project Structure
+
 Heart-Failure-Prediction/
-│── app.py                 # Streamlit web app
-│── heart_failure_model.keras  # Trained ANN model
-│── scaler.pkl             # Saved StandardScaler (for normalization)
-│── requirements.txt       # Project dependencies
-│── README.md              # Project documentation
-│── notebook.ipynb         # (Optional) Training Jupyter Notebook
+│
+├── app.py                  # Streamlit web app  
+├── heart_failure_model.keras # Trained ANN model  
+├── scaler.pkl              # Saved StandardScaler (for normalization)  
+├── requirements.txt        # Project dependencies  
+├── README.md               # Project documentation  
+└── notebook.ipynb          # (Optional) Training Jupyter Notebook  
+
 
 ## ⚙️ Installation & Setup
 1. Clone Repository
