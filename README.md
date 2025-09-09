@@ -45,7 +45,7 @@ pip install -r requirements.txt
 streamlit run app.py
 
 
-The app will open at:https://heartfailurepredictionann-gcl9oye7sddsd9cyc5uo7d.streamlit.app/
+The app will open at: https://heartfailurepredictionann-gcl9oye7sddsd9cyc5uo7d.streamlit.app/
 
 ## 🧠 Model Details
 
